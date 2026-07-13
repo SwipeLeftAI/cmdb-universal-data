@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-06-07T19:02:32+00:00",
+  "license": "MIT",
+  "name": "servicematch-universal-rules",
+  "sections": {
+    "manufacturer_aliases": {
+      "count": 84,
+      "file": "corpus/manufacturer_aliases.json"
+    },
+    "model_patterns": {
+      "count": 54,
+      "file": "corpus/model_patterns.json"
+    },
+    "os_normalization": {
+      "count": 52,
+      "file": "corpus/os_normalization.json"
+    }
+  },
+  "sn_canonical_reference": "customers/amicus/reference_data/prod_core_company.csv (OOTB-aligned)",
+  "source": {
+    "file": "/Users/jamesbockrath/TIMESHEET_LAND/new_timesheet/customers/amicus/seed.sql",
+    "git_commit": "7074326325de077c4ff155404575ee4c4ae4c213"
+  },
+  "version": "0.1.0"
+}

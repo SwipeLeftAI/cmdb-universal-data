@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "description": "SwipeLeft universal discovery-source catalog. Universal content only \u2014 never customer-specific. Consumed anonymously by every ServiceMatch deployment (back_end/cmdb/discovery_sources_catalog.py). Token normalization: lowercase, spaces/hyphens -> underscores.",
+  "note_ad_computers": "Active Directory computer objects are DELIBERATELY absent: AD is merge-only corroboration and may never originate CIs (PLAN_CSDM5 item 21).",
+  "sources": [
+    {
+      "canonical": "intune",
+      "intent": "device_discovery",
+      "aliases": [
+        "intune_basic",
+        "intune_inventory",
+        "intune_enhanced",
+        "powershell-intune",
+        "powershell_intune"
+      ],
+      "notes": "Microsoft Intune (cloud MDM). Variant tokens from Pro sessions 2#8 and amicus-prof 2026-06-09."
+    },
+    {
+      "canonical": "nexthink",
+      "intent": "device_discovery",
+      "aliases": [
+        "nexthink_inventory"
+      ],
+      "notes": "Nexthink endpoint monitoring."
+    },
+    {
+      "canonical": "sciencelogic",
+      "intent": "device_discovery",
+      "aliases": [
+        "sciencelogic_asset_report"
+      ],
+      "notes": "ScienceLogic infrastructure monitoring."
+    },
+    {
+      "canonical": "sccm",
+      "intent": "device_discovery",
+      "aliases": [
+        "sccm_hardware",
+        "sccm_hardware_inventory"
+      ],
+      "notes": "Microsoft Endpoint Configuration Manager hardware inventory. The software/services inventories are app_feeder side-files, not device discovery."
+    },
+    {
+      "canonical": "jamf",
+      "intent": "device_discovery",
+      "aliases": [],
+      "notes": "Jamf (Mac MDM)."
+    },
+    {
+      "canonical": "workspace_one",
+      "intent": "device_discovery",
+      "aliases": [],
+      "notes": "VMware Workspace ONE MDM."
+    },
+    {
+      "canonical": "tanium",
+      "intent": "device_discovery",
+      "aliases": [],
+      "notes": "Tanium endpoint platform."
+    },
+    {
+      "canonical": "crowdstrike",
+      "intent": "device_discovery",
+      "aliases": [],
+      "notes": "CrowdStrike EDR."
+    },
+    {
+      "canonical": "appdynamics",
+      "intent": "app_feeder",
+      "aliases": [],
+      "notes": "APM application-tier feeder, not endpoint discovery. Trusted-known so audits treat it as recognized (B115-SIM-1-APPD-SEED, 2026-06-13)."
+    },
+    {
+      "canonical": "lansweeper",
+      "intent": "device_discovery",
+      "aliases": [],
+      "notes": "Network-scan inventory; consultant review recommended when primary."
+    },
+    {
+      "canonical": "logicmonitor",
+      "intent": "device_discovery",
+      "aliases": [
+        "logic_monitor",
+        "lm_deviceexport",
+        "logicmonitor_deviceexport"
+      ],
+      "notes": "LogicMonitor infrastructure monitoring (spainsim_infra F-17, 2026-06-10)."
+    }
+  ]
+}

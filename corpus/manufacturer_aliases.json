@@ -1,0 +1,593 @@
+{
+  "count": 84,
+  "entries": [
+    {
+      "alias": "dell",
+      "canonical": "Dell Inc.",
+      "priority": 100,
+      "rule_id": "mfg_dell",
+      "source_rule_name": "dell -> Dell Inc."
+    },
+    {
+      "alias": "dell inc",
+      "canonical": "Dell Inc.",
+      "priority": 101,
+      "rule_id": "mfg_dell_inc",
+      "source_rule_name": "dell inc -> Dell Inc."
+    },
+    {
+      "alias": "dell inc.",
+      "canonical": "Dell Inc.",
+      "priority": 102,
+      "rule_id": "mfg_dell_inc_2",
+      "source_rule_name": "dell inc. -> Dell Inc."
+    },
+    {
+      "alias": "dell technologies",
+      "canonical": "Dell Inc.",
+      "priority": 103,
+      "rule_id": "mfg_dell_technologies",
+      "source_rule_name": "dell technologies -> Dell Inc."
+    },
+    {
+      "alias": "dell computer",
+      "canonical": "Dell Inc.",
+      "priority": 104,
+      "rule_id": "mfg_dell_computer",
+      "source_rule_name": "dell computer -> Dell Inc."
+    },
+    {
+      "alias": "dell computer corporation",
+      "canonical": "Dell Inc.",
+      "priority": 105,
+      "rule_id": "mfg_dell_computer_corporation",
+      "source_rule_name": "dell computer corporation -> Dell Inc."
+    },
+    {
+      "alias": "hp",
+      "canonical": "Hewlett-Packard",
+      "priority": 106,
+      "rule_id": "mfg_hp",
+      "source_rule_name": "hp -> Hewlett-Packard"
+    },
+    {
+      "alias": "hp inc",
+      "canonical": "Hewlett-Packard",
+      "priority": 107,
+      "rule_id": "mfg_hp_inc",
+      "source_rule_name": "hp inc -> Hewlett-Packard"
+    },
+    {
+      "alias": "hp inc.",
+      "canonical": "Hewlett-Packard",
+      "priority": 108,
+      "rule_id": "mfg_hp_inc_2",
+      "source_rule_name": "hp inc. -> Hewlett-Packard"
+    },
+    {
+      "alias": "hewlett-packard",
+      "canonical": "Hewlett-Packard",
+      "priority": 109,
+      "rule_id": "mfg_hewlett_packard",
+      "source_rule_name": "hewlett-packard -> Hewlett-Packard"
+    },
+    {
+      "alias": "hewlett packard",
+      "canonical": "Hewlett-Packard",
+      "priority": 110,
+      "rule_id": "mfg_hewlett_packard_2",
+      "source_rule_name": "hewlett packard -> Hewlett-Packard"
+    },
+    {
+      "alias": "hewlett-packard company",
+      "canonical": "Hewlett-Packard",
+      "priority": 111,
+      "rule_id": "mfg_hewlett_packard_company",
+      "source_rule_name": "hewlett-packard company -> Hewlett-Packard"
+    },
+    {
+      "alias": "hpe",
+      "canonical": "Hewlett-Packard",
+      "priority": 112,
+      "rule_id": "mfg_hpe",
+      "source_rule_name": "hpe -> Hewlett-Packard"
+    },
+    {
+      "alias": "hewlett packard enterprise",
+      "canonical": "Hewlett-Packard",
+      "priority": 113,
+      "rule_id": "mfg_hewlett_packard_enterprise",
+      "source_rule_name": "hewlett packard enterprise -> Hewlett-Packard"
+    },
+    {
+      "alias": "lenovo",
+      "canonical": "Lenovo",
+      "priority": 114,
+      "rule_id": "mfg_lenovo",
+      "source_rule_name": "lenovo -> Lenovo"
+    },
+    {
+      "alias": "lenovo group",
+      "canonical": "Lenovo",
+      "priority": 115,
+      "rule_id": "mfg_lenovo_group",
+      "source_rule_name": "lenovo group -> Lenovo"
+    },
+    {
+      "alias": "lenovo ltd",
+      "canonical": "Lenovo",
+      "priority": 116,
+      "rule_id": "mfg_lenovo_ltd",
+      "source_rule_name": "lenovo ltd -> Lenovo"
+    },
+    {
+      "alias": "lenovo group limited",
+      "canonical": "Lenovo",
+      "priority": 117,
+      "rule_id": "mfg_lenovo_group_limited",
+      "source_rule_name": "lenovo group limited -> Lenovo"
+    },
+    {
+      "alias": "apple",
+      "canonical": "Apple",
+      "priority": 118,
+      "rule_id": "mfg_apple",
+      "source_rule_name": "apple -> Apple"
+    },
+    {
+      "alias": "apple inc",
+      "canonical": "Apple",
+      "priority": 119,
+      "rule_id": "mfg_apple_inc",
+      "source_rule_name": "apple inc -> Apple"
+    },
+    {
+      "alias": "apple inc.",
+      "canonical": "Apple",
+      "priority": 120,
+      "rule_id": "mfg_apple_inc_2",
+      "source_rule_name": "apple inc. -> Apple"
+    },
+    {
+      "alias": "apple computer",
+      "canonical": "Apple",
+      "priority": 121,
+      "rule_id": "mfg_apple_computer",
+      "source_rule_name": "apple computer -> Apple"
+    },
+    {
+      "alias": "apple computer inc",
+      "canonical": "Apple",
+      "priority": 122,
+      "rule_id": "mfg_apple_computer_inc",
+      "source_rule_name": "apple computer inc -> Apple"
+    },
+    {
+      "alias": "microsoft",
+      "canonical": "Microsoft",
+      "priority": 123,
+      "rule_id": "mfg_microsoft",
+      "source_rule_name": "microsoft -> Microsoft"
+    },
+    {
+      "alias": "microsoft corporation",
+      "canonical": "Microsoft",
+      "priority": 124,
+      "rule_id": "mfg_microsoft_corporation",
+      "source_rule_name": "microsoft corporation -> Microsoft"
+    },
+    {
+      "alias": "msft",
+      "canonical": "Microsoft",
+      "priority": 125,
+      "rule_id": "mfg_msft",
+      "source_rule_name": "msft -> Microsoft"
+    },
+    {
+      "alias": "microsoft corp",
+      "canonical": "Microsoft",
+      "priority": 126,
+      "rule_id": "mfg_microsoft_corp",
+      "source_rule_name": "microsoft corp -> Microsoft"
+    },
+    {
+      "alias": "vmware",
+      "canonical": "VMware, Inc.",
+      "priority": 127,
+      "rule_id": "mfg_vmware",
+      "source_rule_name": "vmware -> VMware, Inc."
+    },
+    {
+      "alias": "vmware inc",
+      "canonical": "VMware, Inc.",
+      "priority": 128,
+      "rule_id": "mfg_vmware_inc",
+      "source_rule_name": "vmware inc -> VMware, Inc."
+    },
+    {
+      "alias": "vmware, inc.",
+      "canonical": "VMware, Inc.",
+      "priority": 129,
+      "rule_id": "mfg_vmware_inc_2",
+      "source_rule_name": "vmware, inc. -> VMware, Inc."
+    },
+    {
+      "alias": "vmware inc.",
+      "canonical": "VMware, Inc.",
+      "priority": 130,
+      "rule_id": "mfg_vmware_inc_3",
+      "source_rule_name": "vmware inc. -> VMware, Inc."
+    },
+    {
+      "alias": "cisco",
+      "canonical": "Cisco Systems, Inc.",
+      "priority": 131,
+      "rule_id": "mfg_cisco",
+      "source_rule_name": "cisco -> Cisco Systems, Inc."
+    },
+    {
+      "alias": "cisco systems",
+      "canonical": "Cisco Systems, Inc.",
+      "priority": 132,
+      "rule_id": "mfg_cisco_systems",
+      "source_rule_name": "cisco systems -> Cisco Systems, Inc."
+    },
+    {
+      "alias": "cisco systems inc",
+      "canonical": "Cisco Systems, Inc.",
+      "priority": 133,
+      "rule_id": "mfg_cisco_systems_inc",
+      "source_rule_name": "cisco systems inc -> Cisco Systems, Inc."
+    },
+    {
+      "alias": "cisco systems, inc.",
+      "canonical": "Cisco Systems, Inc.",
+      "priority": 134,
+      "rule_id": "mfg_cisco_systems_inc_2",
+      "source_rule_name": "cisco systems, inc. -> Cisco Systems, Inc."
+    },
+    {
+      "alias": "intel",
+      "canonical": "Intel",
+      "priority": 135,
+      "rule_id": "mfg_intel",
+      "source_rule_name": "intel -> Intel"
+    },
+    {
+      "alias": "intel corporation",
+      "canonical": "Intel",
+      "priority": 136,
+      "rule_id": "mfg_intel_corporation",
+      "source_rule_name": "intel corporation -> Intel"
+    },
+    {
+      "alias": "intel corp",
+      "canonical": "Intel",
+      "priority": 137,
+      "rule_id": "mfg_intel_corp",
+      "source_rule_name": "intel corp -> Intel"
+    },
+    {
+      "alias": "samsung",
+      "canonical": "Samsung",
+      "priority": 138,
+      "rule_id": "mfg_samsung",
+      "source_rule_name": "samsung -> Samsung"
+    },
+    {
+      "alias": "samsung electronics",
+      "canonical": "Samsung",
+      "priority": 139,
+      "rule_id": "mfg_samsung_electronics",
+      "source_rule_name": "samsung electronics -> Samsung"
+    },
+    {
+      "alias": "samsung electronics co",
+      "canonical": "Samsung",
+      "priority": 140,
+      "rule_id": "mfg_samsung_electronics_co",
+      "source_rule_name": "samsung electronics co -> Samsung"
+    },
+    {
+      "alias": "sony",
+      "canonical": "Sony",
+      "priority": 141,
+      "rule_id": "mfg_sony",
+      "source_rule_name": "sony -> Sony"
+    },
+    {
+      "alias": "sony corporation",
+      "canonical": "Sony",
+      "priority": 142,
+      "rule_id": "mfg_sony_corporation",
+      "source_rule_name": "sony corporation -> Sony"
+    },
+    {
+      "alias": "ibm",
+      "canonical": "IBM",
+      "priority": 143,
+      "rule_id": "mfg_ibm",
+      "source_rule_name": "ibm -> IBM"
+    },
+    {
+      "alias": "ibm corporation",
+      "canonical": "IBM",
+      "priority": 144,
+      "rule_id": "mfg_ibm_corporation",
+      "source_rule_name": "ibm corporation -> IBM"
+    },
+    {
+      "alias": "international business machines",
+      "canonical": "IBM",
+      "priority": 145,
+      "rule_id": "mfg_international_business_machines",
+      "source_rule_name": "international business machines -> IBM"
+    },
+    {
+      "alias": "oracle",
+      "canonical": "Oracle",
+      "priority": 146,
+      "rule_id": "mfg_oracle",
+      "source_rule_name": "oracle -> Oracle"
+    },
+    {
+      "alias": "oracle corporation",
+      "canonical": "Oracle",
+      "priority": 147,
+      "rule_id": "mfg_oracle_corporation",
+      "source_rule_name": "oracle corporation -> Oracle"
+    },
+    {
+      "alias": "oracle corp",
+      "canonical": "Oracle",
+      "priority": 148,
+      "rule_id": "mfg_oracle_corp",
+      "source_rule_name": "oracle corp -> Oracle"
+    },
+    {
+      "alias": "google",
+      "canonical": "Google LLC",
+      "priority": 149,
+      "rule_id": "mfg_google",
+      "source_rule_name": "google -> Google LLC"
+    },
+    {
+      "alias": "google llc",
+      "canonical": "Google LLC",
+      "priority": 150,
+      "rule_id": "mfg_google_llc",
+      "source_rule_name": "google llc -> Google LLC"
+    },
+    {
+      "alias": "google inc",
+      "canonical": "Google LLC",
+      "priority": 151,
+      "rule_id": "mfg_google_inc",
+      "source_rule_name": "google inc -> Google LLC"
+    },
+    {
+      "alias": "amazon",
+      "canonical": "Amazon",
+      "priority": 152,
+      "rule_id": "mfg_amazon",
+      "source_rule_name": "amazon -> Amazon"
+    },
+    {
+      "alias": "amazon.com",
+      "canonical": "Amazon",
+      "priority": 153,
+      "rule_id": "mfg_amazon_com",
+      "source_rule_name": "amazon.com -> Amazon"
+    },
+    {
+      "alias": "amazon.com, inc.",
+      "canonical": "Amazon",
+      "priority": 154,
+      "rule_id": "mfg_amazon_com_inc",
+      "source_rule_name": "amazon.com, inc. -> Amazon"
+    },
+    {
+      "alias": "aws",
+      "canonical": "Amazon Web Services",
+      "priority": 155,
+      "rule_id": "mfg_aws",
+      "source_rule_name": "aws -> Amazon Web Services"
+    },
+    {
+      "alias": "amazon web services",
+      "canonical": "Amazon Web Services",
+      "priority": 156,
+      "rule_id": "mfg_amazon_web_services",
+      "source_rule_name": "amazon web services -> Amazon Web Services"
+    },
+    {
+      "alias": "supermicro",
+      "canonical": "Supermicro",
+      "priority": 157,
+      "rule_id": "mfg_supermicro",
+      "source_rule_name": "supermicro -> Supermicro"
+    },
+    {
+      "alias": "super micro",
+      "canonical": "Supermicro",
+      "priority": 158,
+      "rule_id": "mfg_super_micro",
+      "source_rule_name": "super micro -> Supermicro"
+    },
+    {
+      "alias": "super micro computer",
+      "canonical": "Supermicro",
+      "priority": 159,
+      "rule_id": "mfg_super_micro_computer",
+      "source_rule_name": "super micro computer -> Supermicro"
+    },
+    {
+      "alias": "super micro computer, inc.",
+      "canonical": "Supermicro",
+      "priority": 160,
+      "rule_id": "mfg_super_micro_computer_inc",
+      "source_rule_name": "super micro computer, inc. -> Supermicro"
+    },
+    {
+      "alias": "asus",
+      "canonical": "ASUSTeK Computer Inc.",
+      "priority": 161,
+      "rule_id": "mfg_asus",
+      "source_rule_name": "asus -> ASUSTeK Computer Inc."
+    },
+    {
+      "alias": "asustek",
+      "canonical": "ASUSTeK Computer Inc.",
+      "priority": 162,
+      "rule_id": "mfg_asustek",
+      "source_rule_name": "asustek -> ASUSTeK Computer Inc."
+    },
+    {
+      "alias": "asustek computer",
+      "canonical": "ASUSTeK Computer Inc.",
+      "priority": 163,
+      "rule_id": "mfg_asustek_computer",
+      "source_rule_name": "asustek computer -> ASUSTeK Computer Inc."
+    },
+    {
+      "alias": "acer",
+      "canonical": "Acer Inc.",
+      "priority": 164,
+      "rule_id": "mfg_acer",
+      "source_rule_name": "acer -> Acer Inc."
+    },
+    {
+      "alias": "acer inc",
+      "canonical": "Acer Inc.",
+      "priority": 165,
+      "rule_id": "mfg_acer_inc",
+      "source_rule_name": "acer inc -> Acer Inc."
+    },
+    {
+      "alias": "acer inc.",
+      "canonical": "Acer Inc.",
+      "priority": 166,
+      "rule_id": "mfg_acer_inc_2",
+      "source_rule_name": "acer inc. -> Acer Inc."
+    },
+    {
+      "alias": "fujitsu",
+      "canonical": "Fujitsu Limited",
+      "priority": 167,
+      "rule_id": "mfg_fujitsu",
+      "source_rule_name": "fujitsu -> Fujitsu Limited"
+    },
+    {
+      "alias": "fujitsu limited",
+      "canonical": "Fujitsu Limited",
+      "priority": 168,
+      "rule_id": "mfg_fujitsu_limited",
+      "source_rule_name": "fujitsu limited -> Fujitsu Limited"
+    },
+    {
+      "alias": "toshiba",
+      "canonical": "Toshiba Corporation",
+      "priority": 169,
+      "rule_id": "mfg_toshiba",
+      "source_rule_name": "toshiba -> Toshiba Corporation"
+    },
+    {
+      "alias": "toshiba corporation",
+      "canonical": "Toshiba Corporation",
+      "priority": 170,
+      "rule_id": "mfg_toshiba_corporation",
+      "source_rule_name": "toshiba corporation -> Toshiba Corporation"
+    },
+    {
+      "alias": "panasonic",
+      "canonical": "Panasonic Corporation",
+      "priority": 171,
+      "rule_id": "mfg_panasonic",
+      "source_rule_name": "panasonic -> Panasonic Corporation"
+    },
+    {
+      "alias": "panasonic corporation",
+      "canonical": "Panasonic Corporation",
+      "priority": 172,
+      "rule_id": "mfg_panasonic_corporation",
+      "source_rule_name": "panasonic corporation -> Panasonic Corporation"
+    },
+    {
+      "alias": "netapp",
+      "canonical": "NetApp, Inc.",
+      "priority": 173,
+      "rule_id": "mfg_netapp",
+      "source_rule_name": "netapp -> NetApp, Inc."
+    },
+    {
+      "alias": "netapp inc",
+      "canonical": "NetApp, Inc.",
+      "priority": 174,
+      "rule_id": "mfg_netapp_inc",
+      "source_rule_name": "netapp inc -> NetApp, Inc."
+    },
+    {
+      "alias": "emc",
+      "canonical": "Dell EMC",
+      "priority": 175,
+      "rule_id": "mfg_emc",
+      "source_rule_name": "emc -> Dell EMC"
+    },
+    {
+      "alias": "dell emc",
+      "canonical": "Dell EMC",
+      "priority": 176,
+      "rule_id": "mfg_dell_emc",
+      "source_rule_name": "dell emc -> Dell EMC"
+    },
+    {
+      "alias": "emc corporation",
+      "canonical": "Dell EMC",
+      "priority": 177,
+      "rule_id": "mfg_emc_corporation",
+      "source_rule_name": "emc corporation -> Dell EMC"
+    },
+    {
+      "alias": "motorola",
+      "canonical": "Motorola",
+      "priority": 178,
+      "rule_id": "mfg_motorola",
+      "source_rule_name": "motorola -> Motorola"
+    },
+    {
+      "alias": "motorola inc",
+      "canonical": "Motorola",
+      "priority": 179,
+      "rule_id": "mfg_motorola_inc",
+      "source_rule_name": "motorola inc -> Motorola"
+    },
+    {
+      "alias": "motorola mobility",
+      "canonical": "Motorola",
+      "priority": 180,
+      "rule_id": "mfg_motorola_mobility",
+      "source_rule_name": "motorola mobility -> Motorola"
+    },
+    {
+      "alias": "motorola solutions",
+      "canonical": "Motorola",
+      "priority": 181,
+      "rule_id": "mfg_motorola_solutions",
+      "source_rule_name": "motorola solutions -> Motorola"
+    },
+    {
+      "alias": "net-snmp",
+      "canonical": "",
+      "priority": 182,
+      "rule_id": "mfg_net_snmp",
+      "source_rule_name": "net-snmp -> "
+    },
+    {
+      "alias": "openstack",
+      "canonical": "",
+      "priority": 183,
+      "rule_id": "mfg_openstack",
+      "source_rule_name": "openstack -> "
+    }
+  ]
+}

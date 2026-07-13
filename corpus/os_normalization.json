@@ -1,0 +1,678 @@
+{
+  "count": 52,
+  "entries": [
+    {
+      "canonical": "Windows 11 Enterprise",
+      "pattern": {
+        "match": "enterprise",
+        "match_all": [
+          "windows",
+          "11"
+        ]
+      },
+      "priority": 100,
+      "rule_id": "os_windows_11_enterprise_000",
+      "source_rule_name": "Windows 11 Enterprise"
+    },
+    {
+      "canonical": "Windows 11 Pro Education",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "11",
+          "pro",
+          "education"
+        ]
+      },
+      "priority": 101,
+      "rule_id": "os_windows_11_pro_education_001",
+      "source_rule_name": "Windows 11 Pro Education"
+    },
+    {
+      "canonical": "Windows 11 Pro",
+      "pattern": {
+        "exclude": "education",
+        "match_all": [
+          "windows",
+          "11",
+          "pro"
+        ]
+      },
+      "priority": 102,
+      "rule_id": "os_windows_11_pro_002",
+      "source_rule_name": "Windows 11 Pro"
+    },
+    {
+      "canonical": "Windows 11 Home",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "11",
+          "home"
+        ]
+      },
+      "priority": 103,
+      "rule_id": "os_windows_11_home_003",
+      "source_rule_name": "Windows 11 Home"
+    },
+    {
+      "canonical": "Windows 11 Education",
+      "pattern": {
+        "exclude": "pro",
+        "match_all": [
+          "windows",
+          "11",
+          "education"
+        ]
+      },
+      "priority": 104,
+      "rule_id": "os_windows_11_education_004",
+      "source_rule_name": "Windows 11 Education"
+    },
+    {
+      "canonical": "Windows 11",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "11"
+        ]
+      },
+      "priority": 105,
+      "rule_id": "os_windows_11_005",
+      "source_rule_name": "Windows 11"
+    },
+    {
+      "canonical": "Windows 10 Enterprise LTSC",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "10",
+          "enterprise",
+          "ltsc"
+        ]
+      },
+      "priority": 106,
+      "rule_id": "os_windows_10_enterprise_ltsc_006",
+      "source_rule_name": "Windows 10 Enterprise LTSC"
+    },
+    {
+      "canonical": "Windows 10 Enterprise LTSC",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "10",
+          "enterprise",
+          "ltsb"
+        ]
+      },
+      "priority": 107,
+      "rule_id": "os_windows_10_enterprise_ltsc_007",
+      "source_rule_name": "Windows 10 Enterprise LTSC"
+    },
+    {
+      "canonical": "Windows 10 Enterprise",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "10",
+          "enterprise"
+        ]
+      },
+      "priority": 108,
+      "rule_id": "os_windows_10_enterprise_008",
+      "source_rule_name": "Windows 10 Enterprise"
+    },
+    {
+      "canonical": "Windows 10 Pro Education",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "10",
+          "pro",
+          "education"
+        ]
+      },
+      "priority": 109,
+      "rule_id": "os_windows_10_pro_education_009",
+      "source_rule_name": "Windows 10 Pro Education"
+    },
+    {
+      "canonical": "Windows 10 Pro",
+      "pattern": {
+        "exclude": "education",
+        "match_all": [
+          "windows",
+          "10",
+          "pro"
+        ]
+      },
+      "priority": 110,
+      "rule_id": "os_windows_10_pro_010",
+      "source_rule_name": "Windows 10 Pro"
+    },
+    {
+      "canonical": "Windows 10 Home",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "10",
+          "home"
+        ]
+      },
+      "priority": 111,
+      "rule_id": "os_windows_10_home_011",
+      "source_rule_name": "Windows 10 Home"
+    },
+    {
+      "canonical": "Windows 10 Education",
+      "pattern": {
+        "exclude": "pro",
+        "match_all": [
+          "windows",
+          "10",
+          "education"
+        ]
+      },
+      "priority": 112,
+      "rule_id": "os_windows_10_education_012",
+      "source_rule_name": "Windows 10 Education"
+    },
+    {
+      "canonical": "Windows 10",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "10"
+        ]
+      },
+      "priority": 113,
+      "rule_id": "os_windows_10_013",
+      "source_rule_name": "Windows 10"
+    },
+    {
+      "canonical": "Windows Server 2022 Datacenter",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2022",
+          "datacenter"
+        ]
+      },
+      "priority": 114,
+      "rule_id": "os_windows_server_2022_datacenter_014",
+      "source_rule_name": "Windows Server 2022 Datacenter"
+    },
+    {
+      "canonical": "Windows Server 2022 Standard",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2022",
+          "standard"
+        ]
+      },
+      "priority": 115,
+      "rule_id": "os_windows_server_2022_standard_015",
+      "source_rule_name": "Windows Server 2022 Standard"
+    },
+    {
+      "canonical": "Windows Server 2022",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2022"
+        ]
+      },
+      "priority": 116,
+      "rule_id": "os_windows_server_2022_016",
+      "source_rule_name": "Windows Server 2022"
+    },
+    {
+      "canonical": "Windows Server 2019 Datacenter",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2019",
+          "datacenter"
+        ]
+      },
+      "priority": 117,
+      "rule_id": "os_windows_server_2019_datacenter_017",
+      "source_rule_name": "Windows Server 2019 Datacenter"
+    },
+    {
+      "canonical": "Windows Server 2019 Standard",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2019",
+          "standard"
+        ]
+      },
+      "priority": 118,
+      "rule_id": "os_windows_server_2019_standard_018",
+      "source_rule_name": "Windows Server 2019 Standard"
+    },
+    {
+      "canonical": "Windows Server 2019",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2019"
+        ]
+      },
+      "priority": 119,
+      "rule_id": "os_windows_server_2019_019",
+      "source_rule_name": "Windows Server 2019"
+    },
+    {
+      "canonical": "Windows Server 2016 Datacenter",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2016",
+          "datacenter"
+        ]
+      },
+      "priority": 120,
+      "rule_id": "os_windows_server_2016_datacenter_020",
+      "source_rule_name": "Windows Server 2016 Datacenter"
+    },
+    {
+      "canonical": "Windows Server 2016 Standard",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2016",
+          "standard"
+        ]
+      },
+      "priority": 121,
+      "rule_id": "os_windows_server_2016_standard_021",
+      "source_rule_name": "Windows Server 2016 Standard"
+    },
+    {
+      "canonical": "Windows Server 2016",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2016"
+        ]
+      },
+      "priority": 122,
+      "rule_id": "os_windows_server_2016_022",
+      "source_rule_name": "Windows Server 2016"
+    },
+    {
+      "canonical": "Windows Server 2012 R2",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2012",
+          "r2"
+        ]
+      },
+      "priority": 123,
+      "rule_id": "os_windows_server_2012_r2_023",
+      "source_rule_name": "Windows Server 2012 R2"
+    },
+    {
+      "canonical": "Windows Server 2012",
+      "pattern": {
+        "match_all": [
+          "windows",
+          "server",
+          "2012"
+        ]
+      },
+      "priority": 124,
+      "rule_id": "os_windows_server_2012_024",
+      "source_rule_name": "Windows Server 2012"
+    },
+    {
+      "canonical": "macOS Sequoia",
+      "pattern": {
+        "match": "macos",
+        "match_any": [
+          "15",
+          "sequoia"
+        ]
+      },
+      "priority": 125,
+      "rule_id": "os_macos_sequoia_025",
+      "source_rule_name": "macOS Sequoia"
+    },
+    {
+      "canonical": "macOS Sonoma",
+      "pattern": {
+        "match": "macos",
+        "match_any": [
+          "14",
+          "sonoma"
+        ]
+      },
+      "priority": 126,
+      "rule_id": "os_macos_sonoma_026",
+      "source_rule_name": "macOS Sonoma"
+    },
+    {
+      "canonical": "macOS Ventura",
+      "pattern": {
+        "match": "macos",
+        "match_any": [
+          "13",
+          "ventura"
+        ]
+      },
+      "priority": 127,
+      "rule_id": "os_macos_ventura_027",
+      "source_rule_name": "macOS Ventura"
+    },
+    {
+      "canonical": "macOS Monterey",
+      "pattern": {
+        "match": "macos",
+        "match_any": [
+          "12",
+          "monterey"
+        ]
+      },
+      "priority": 128,
+      "rule_id": "os_macos_monterey_028",
+      "source_rule_name": "macOS Monterey"
+    },
+    {
+      "canonical": "macOS Big Sur",
+      "pattern": {
+        "match": "macos",
+        "match_any": [
+          "11",
+          "big sur"
+        ]
+      },
+      "priority": 129,
+      "rule_id": "os_macos_big_sur_029",
+      "source_rule_name": "macOS Big Sur"
+    },
+    {
+      "canonical": "macOS Catalina",
+      "pattern": {
+        "match": "macos",
+        "match_any": [
+          "10.15",
+          "catalina"
+        ]
+      },
+      "priority": 130,
+      "rule_id": "os_macos_catalina_030",
+      "source_rule_name": "macOS Catalina"
+    },
+    {
+      "canonical": "macOS Mojave",
+      "pattern": {
+        "match": "macos",
+        "match_any": [
+          "10.14",
+          "mojave"
+        ]
+      },
+      "priority": 131,
+      "rule_id": "os_macos_mojave_031",
+      "source_rule_name": "macOS Mojave"
+    },
+    {
+      "canonical": "macOS",
+      "pattern": {
+        "match_any": [
+          "macos",
+          "mac os"
+        ]
+      },
+      "priority": 132,
+      "rule_id": "os_macos_032",
+      "source_rule_name": "macOS"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "exclude": "cisco",
+        "match": "ios",
+        "regex_extract": "ios\\s*(\\d+)",
+        "result_fallback": "iOS"
+      },
+      "priority": 133,
+      "rule_id": "os_apple_ios_mobile_operating_system_033",
+      "source_rule_name": "iOS {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "ipados",
+        "regex_extract": "ipados\\s*(\\d+)",
+        "result_fallback": "iPadOS"
+      },
+      "priority": 134,
+      "rule_id": "os_apple_ipados_for_ipad_devices_034",
+      "source_rule_name": "iPadOS {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "lts_versions": [
+          "22.04",
+          "20.04",
+          "18.04",
+          "16.04",
+          "24.04"
+        ],
+        "match": "ubuntu",
+        "regex_extract": "ubuntu\\s*(\\d+\\.\\d+)",
+        "result_fallback": "Ubuntu",
+        "result_template_lts": "Ubuntu {1} LTS"
+      },
+      "priority": 135,
+      "rule_id": "os_ubuntu_linux_distribution_035",
+      "source_rule_name": "Ubuntu {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match_any": [
+          "rhel",
+          "red hat"
+        ],
+        "regex_extract": "(\\d+)",
+        "result_fallback": "Red Hat Enterprise Linux"
+      },
+      "priority": 136,
+      "rule_id": "os_red_hat_enterprise_linux_036",
+      "source_rule_name": "Red Hat Enterprise Linux {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match_all": [
+          "centos",
+          "stream"
+        ],
+        "regex_extract": "stream\\s*(\\d+)",
+        "result_fallback": "CentOS Stream"
+      },
+      "priority": 137,
+      "rule_id": "os_centos_stream_rolling_release_037",
+      "source_rule_name": "CentOS Stream {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "centos",
+        "regex_extract": "centos\\s*(\\d+)",
+        "result_fallback": "CentOS"
+      },
+      "priority": 138,
+      "rule_id": "os_centos_linux_038",
+      "source_rule_name": "CentOS {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "debian",
+        "regex_extract": "debian\\s*(\\d+)",
+        "result_fallback": "Debian"
+      },
+      "priority": 139,
+      "rule_id": "os_debian_linux_distribution_039",
+      "source_rule_name": "Debian {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match_any": [
+          "sles",
+          "suse enterprise"
+        ],
+        "regex_extract": "(\\d+)",
+        "result_fallback": "SUSE Linux Enterprise Server"
+      },
+      "priority": 140,
+      "rule_id": "os_suse_linux_enterprise_server_040",
+      "source_rule_name": "SUSE Linux Enterprise Server {1}"
+    },
+    {
+      "canonical": "openSUSE",
+      "pattern": {
+        "match": "opensuse"
+      },
+      "priority": 141,
+      "rule_id": "os_opensuse_041",
+      "source_rule_name": "openSUSE"
+    },
+    {
+      "canonical": "SUSE Linux Enterprise Server",
+      "pattern": {
+        "match": "suse"
+      },
+      "priority": 142,
+      "rule_id": "os_suse_linux_enterprise_server_042",
+      "source_rule_name": "SUSE Linux Enterprise Server"
+    },
+    {
+      "canonical": "Amazon Linux 2023",
+      "pattern": {
+        "match": "amazon linux",
+        "match_any": [
+          "2023"
+        ]
+      },
+      "priority": 143,
+      "rule_id": "os_amazon_linux_2023_043",
+      "source_rule_name": "Amazon Linux 2023"
+    },
+    {
+      "canonical": "Amazon Linux 2",
+      "pattern": {
+        "exclude": "2023",
+        "match": "amazon linux",
+        "match_any": [
+          "2"
+        ]
+      },
+      "priority": 144,
+      "rule_id": "os_amazon_linux_2_044",
+      "source_rule_name": "Amazon Linux 2"
+    },
+    {
+      "canonical": "Amazon Linux",
+      "pattern": {
+        "match": "amazon linux"
+      },
+      "priority": 145,
+      "rule_id": "os_amazon_linux_045",
+      "source_rule_name": "Amazon Linux"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match_any": [
+          "esxi",
+          "vmware esxi"
+        ],
+        "regex_extract": "(\\d+\\.\\d+)",
+        "result_fallback": "VMware ESXi"
+      },
+      "priority": 146,
+      "rule_id": "os_vmware_esxi_hypervisor_046",
+      "source_rule_name": "VMware ESXi {1}"
+    },
+    {
+      "canonical": "Cisco IOS",
+      "pattern": {
+        "match_all": [
+          "cisco",
+          "ios"
+        ]
+      },
+      "priority": 147,
+      "rule_id": "os_cisco_ios_047",
+      "source_rule_name": "Cisco IOS"
+    },
+    {
+      "canonical": "Cisco IOS",
+      "pattern": {
+        "match": "cisco ios"
+      },
+      "priority": 148,
+      "rule_id": "os_cisco_ios_048",
+      "source_rule_name": "Cisco IOS"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "cloud physical service",
+        "result": ""
+      },
+      "priority": 149,
+      "rule_id": "os_sciencelogic_device_category_not_an_os_clear_to_empty_049",
+      "source_rule_name": "ScienceLogic device category, not an OS \u2014 clear to empty"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "exclude": "windows",
+        "match": "datacenter",
+        "result": ""
+      },
+      "priority": 150,
+      "rule_id": "os_meraki_network_type_descriptor_not_an_os_clear_to_empty_050",
+      "source_rule_name": "Meraki network type descriptor, not an OS \u2014 clear to empty"
+    },
+    {
+      "canonical": "Linux",
+      "pattern": {
+        "exclude_any": [
+          "ubuntu",
+          "centos",
+          "red hat",
+          "rhel",
+          "suse",
+          "debian",
+          "amazon"
+        ],
+        "match": "linux"
+      },
+      "priority": 151,
+      "rule_id": "os_linux_051",
+      "source_rule_name": "Linux"
+    }
+  ]
+}

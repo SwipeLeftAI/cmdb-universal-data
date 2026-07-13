@@ -1,0 +1,615 @@
+{
+  "count": 54,
+  "entries": [
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "latitude",
+        "regex": "latitude\\s*e?(\\d{4})"
+      },
+      "priority": 100,
+      "rule_id": "model_latitude_1_000",
+      "source_rule_name": "Latitude {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "xps",
+        "regex": "xps\\s*(\\d{2})"
+      },
+      "priority": 101,
+      "rule_id": "model_xps_1_001",
+      "source_rule_name": "XPS {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "inspiron",
+        "regex": "inspiron\\s*(\\d{4})"
+      },
+      "priority": 102,
+      "rule_id": "model_inspiron_1_002",
+      "source_rule_name": "Inspiron {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "precision",
+        "regex": "precision\\s*(\\d{4})"
+      },
+      "priority": 103,
+      "rule_id": "model_precision_1_003",
+      "source_rule_name": "Precision {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "optiplex",
+        "regex": "optiplex\\s*(\\d{4})"
+      },
+      "priority": 104,
+      "rule_id": "model_optiplex_1_004",
+      "source_rule_name": "OptiPlex {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "elitebook",
+        "regex": "elitebook\\s*(\\d{3,4})\\s*(g\\d+)?",
+        "uppercase_groups": [
+          2
+        ]
+      },
+      "priority": 105,
+      "rule_id": "model_elitebook_1_2_005",
+      "source_rule_name": "EliteBook {1} {2}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "probook",
+        "regex": "probook\\s*(\\d{3,4})\\s*(g\\d+)?",
+        "uppercase_groups": [
+          2
+        ]
+      },
+      "priority": 106,
+      "rule_id": "model_probook_1_2_006",
+      "source_rule_name": "ProBook {1} {2}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "zbook",
+        "regex": "zbook\\s*(\\d{2})\\s*(g\\d+)?",
+        "uppercase_groups": [
+          2
+        ]
+      },
+      "priority": 107,
+      "rule_id": "model_zbook_1_2_007",
+      "source_rule_name": "ZBook {1} {2}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "elitedesk",
+        "regex": "elitedesk\\s*(\\d{3})\\s*(g\\d+)?",
+        "uppercase_groups": [
+          2
+        ]
+      },
+      "priority": 108,
+      "rule_id": "model_elitedesk_1_2_008",
+      "source_rule_name": "EliteDesk {1} {2}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "prodesk",
+        "regex": "prodesk\\s*(\\d{3})\\s*(g\\d+)?",
+        "uppercase_groups": [
+          2
+        ]
+      },
+      "priority": 109,
+      "rule_id": "model_prodesk_1_2_009",
+      "source_rule_name": "ProDesk {1} {2}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "thinkpad",
+        "match_all": [
+          "x1",
+          "carbon"
+        ],
+        "regex": "x1\\s+carbon\\s+(gen\\s*\\d+)?",
+        "result_fallback": "ThinkPad X1 Carbon"
+      },
+      "priority": 110,
+      "rule_id": "model_thinkpad_x1_carbon_1_010",
+      "source_rule_name": "ThinkPad X1 Carbon {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "thinkpad",
+        "match_all": [
+          "x1",
+          "yoga"
+        ],
+        "regex": "x1\\s+yoga\\s+(gen\\s*\\d+)?",
+        "result_fallback": "ThinkPad X1 Yoga"
+      },
+      "priority": 111,
+      "rule_id": "model_thinkpad_x1_yoga_1_011",
+      "source_rule_name": "ThinkPad X1 Yoga {1}"
+    },
+    {
+      "canonical": "ThinkPad X1",
+      "pattern": {
+        "exclude_any": [
+          "carbon",
+          "yoga"
+        ],
+        "match": "thinkpad",
+        "match_all": [
+          "x1"
+        ]
+      },
+      "priority": 112,
+      "rule_id": "model_thinkpad_x1_012",
+      "source_rule_name": "ThinkPad X1"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "yoga",
+        "regex": "thinkpad\\s+(t|x|l|p|e)(\\d+)\\s+yoga\\s+gen\\s*(\\d+)",
+        "uppercase_groups": [
+          1
+        ]
+      },
+      "priority": 113,
+      "rule_id": "model_thinkpad_1_2_yoga_gen_3_013",
+      "source_rule_name": "ThinkPad {1}{2} Yoga Gen {3}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "thinkpad",
+        "regex": "thinkpad\\s+(t|x|l|p|e)(\\d+)\\s+gen\\s*(\\d+)",
+        "uppercase_groups": [
+          1
+        ]
+      },
+      "priority": 114,
+      "rule_id": "model_thinkpad_1_2_gen_3_014",
+      "source_rule_name": "ThinkPad {1}{2} Gen {3}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "thinkpad",
+        "regex": "thinkpad\\s+(t|x|l|p|e)(\\d+)",
+        "uppercase_groups": [
+          1
+        ]
+      },
+      "priority": 115,
+      "rule_id": "model_thinkpad_1_2_015",
+      "source_rule_name": "ThinkPad {1}{2}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "thinkcentre",
+        "regex": "thinkcentre\\s*m?(\\d{2,3})"
+      },
+      "priority": 116,
+      "rule_id": "model_thinkcentre_m_1_016",
+      "source_rule_name": "ThinkCentre M{1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "thinkstation",
+        "regex": "thinkstation\\s*p?(\\d{3})"
+      },
+      "priority": 117,
+      "rule_id": "model_thinkstation_p_1_017",
+      "source_rule_name": "ThinkStation P{1}"
+    },
+    {
+      "canonical": "MacBook Pro 16\"",
+      "pattern": {
+        "match": "macbook",
+        "match_all": [
+          "pro",
+          "16"
+        ]
+      },
+      "priority": 118,
+      "rule_id": "model_macbook_pro_16_018",
+      "source_rule_name": "MacBook Pro 16\""
+    },
+    {
+      "canonical": "MacBook Pro 14\"",
+      "pattern": {
+        "match": "macbook",
+        "match_all": [
+          "pro",
+          "14"
+        ]
+      },
+      "priority": 119,
+      "rule_id": "model_macbook_pro_14_019",
+      "source_rule_name": "MacBook Pro 14\""
+    },
+    {
+      "canonical": "MacBook Pro 13\"",
+      "pattern": {
+        "match": "macbook",
+        "match_all": [
+          "pro",
+          "13"
+        ]
+      },
+      "priority": 120,
+      "rule_id": "model_macbook_pro_13_020",
+      "source_rule_name": "MacBook Pro 13\""
+    },
+    {
+      "canonical": "MacBook Pro",
+      "pattern": {
+        "exclude_any": [
+          "13",
+          "14",
+          "16"
+        ],
+        "match": "pro"
+      },
+      "priority": 121,
+      "rule_id": "model_macbook_pro_021",
+      "source_rule_name": "MacBook Pro"
+    },
+    {
+      "canonical": "MacBook Air",
+      "pattern": {
+        "match": "air"
+      },
+      "priority": 122,
+      "rule_id": "model_macbook_air_022",
+      "source_rule_name": "MacBook Air"
+    },
+    {
+      "canonical": "MacBook",
+      "pattern": {
+        "exclude_any": [
+          "pro",
+          "air"
+        ],
+        "match": "macbook"
+      },
+      "priority": 123,
+      "rule_id": "model_macbook_023",
+      "source_rule_name": "MacBook"
+    },
+    {
+      "canonical": "iMac Pro",
+      "pattern": {
+        "match": "pro"
+      },
+      "priority": 124,
+      "rule_id": "model_imac_pro_024",
+      "source_rule_name": "iMac Pro"
+    },
+    {
+      "canonical": "iMac",
+      "pattern": {
+        "exclude": "pro",
+        "match": "imac"
+      },
+      "priority": 125,
+      "rule_id": "model_imac_025",
+      "source_rule_name": "iMac"
+    },
+    {
+      "canonical": "Mac mini",
+      "pattern": {
+        "match": "mac mini"
+      },
+      "priority": 126,
+      "rule_id": "model_mac_mini_026",
+      "source_rule_name": "Mac mini"
+    },
+    {
+      "canonical": "Mac Studio",
+      "pattern": {
+        "match": "mac studio"
+      },
+      "priority": 127,
+      "rule_id": "model_mac_studio_027",
+      "source_rule_name": "Mac Studio"
+    },
+    {
+      "canonical": "Mac Pro",
+      "pattern": {
+        "exclude": "macbook",
+        "match": "mac pro"
+      },
+      "priority": 128,
+      "rule_id": "model_mac_pro_028",
+      "source_rule_name": "Mac Pro"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "laptop",
+        "regex": "surface laptop\\s*(\\d+)?",
+        "result_fallback": "Surface Laptop"
+      },
+      "priority": 129,
+      "rule_id": "model_surface_laptop_1_029",
+      "source_rule_name": "Surface Laptop {1}"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "exclude": "macbook",
+        "match": "pro",
+        "regex": "surface pro\\s*(\\d+)?",
+        "result_fallback": "Surface Pro"
+      },
+      "priority": 130,
+      "rule_id": "model_surface_pro_1_030",
+      "source_rule_name": "Surface Pro {1}"
+    },
+    {
+      "canonical": "Surface Book",
+      "pattern": {
+        "match": "book"
+      },
+      "priority": 131,
+      "rule_id": "model_surface_book_031",
+      "source_rule_name": "Surface Book"
+    },
+    {
+      "canonical": "Surface Go",
+      "pattern": {
+        "match": "go"
+      },
+      "priority": 132,
+      "rule_id": "model_surface_go_032",
+      "source_rule_name": "Surface Go"
+    },
+    {
+      "canonical": "Surface Studio",
+      "pattern": {
+        "match": "studio"
+      },
+      "priority": 133,
+      "rule_id": "model_surface_studio_033",
+      "source_rule_name": "Surface Studio"
+    },
+    {
+      "canonical": "Microsoft Surface",
+      "pattern": {
+        "exclude_any": [
+          "laptop",
+          "pro",
+          "book",
+          "go",
+          "studio"
+        ],
+        "match": "surface"
+      },
+      "priority": 134,
+      "rule_id": "model_microsoft_surface_034",
+      "source_rule_name": "Microsoft Surface"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "ipad air",
+        "regex": "ipad\\s+air\\s+(\\d+[\\w-]*inch)\\s*\\((\\w+)\\)",
+        "uppercase_groups": [
+          2
+        ]
+      },
+      "priority": 135,
+      "rule_id": "model_ipad_air_1_2_035",
+      "source_rule_name": "iPad Air {1} ({2})"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "ipad air",
+        "regex": "ipad\\s+air\\s+(\\d+)\\w*\\s+gen"
+      },
+      "priority": 136,
+      "rule_id": "model_ipad_air_1_th_gen_036",
+      "source_rule_name": "iPad Air {1}th Gen"
+    },
+    {
+      "canonical": "iPad Air",
+      "pattern": {
+        "match": "ipad air"
+      },
+      "priority": 137,
+      "rule_id": "model_ipad_air_037",
+      "source_rule_name": "iPad Air"
+    },
+    {
+      "canonical": "",
+      "pattern": {
+        "match": "ipad pro",
+        "regex": "ipad\\s+pro\\s+(\\d+[\\w-]*inch)\\s*\\((\\w+)\\)",
+        "uppercase_groups": [
+          2
+        ]
+      },
+      "priority": 138,
+      "rule_id": "model_ipad_pro_1_2_038",
+      "source_rule_name": "iPad Pro {1} ({2})"
+    },
+    {
+      "canonical": "iPad Pro",
+      "pattern": {
+        "match": "ipad pro"
+      },
+      "priority": 139,
+      "rule_id": "model_ipad_pro_039",
+      "source_rule_name": "iPad Pro"
+    },
+    {
+      "canonical": "iPad",
+      "pattern": {
+        "exclude_any": [
+          "air",
+          "pro"
+        ],
+        "match": "ipad"
+      },
+      "priority": 140,
+      "rule_id": "model_ipad_040",
+      "source_rule_name": "iPad"
+    },
+    {
+      "canonical": "VMware Virtual Machine",
+      "pattern": {
+        "match": "vmware virtual platform"
+      },
+      "priority": 141,
+      "rule_id": "model_vmware_virtual_machine_041",
+      "source_rule_name": "VMware Virtual Machine"
+    },
+    {
+      "canonical": "VMware7 Virtual Machine",
+      "pattern": {
+        "match": "vmware7"
+      },
+      "priority": 142,
+      "rule_id": "model_vmware7_virtual_machine_042",
+      "source_rule_name": "VMware7 Virtual Machine"
+    },
+    {
+      "canonical": "Virtual Machine",
+      "pattern": {
+        "match": "virtual machine"
+      },
+      "priority": 143,
+      "rule_id": "model_virtual_machine_043",
+      "source_rule_name": "Virtual Machine"
+    },
+    {
+      "canonical": "Hyper-V Virtual Machine",
+      "pattern": {
+        "match": "hyper-v"
+      },
+      "priority": 144,
+      "rule_id": "model_hyper_v_virtual_machine_044",
+      "source_rule_name": "Hyper-V Virtual Machine"
+    },
+    {
+      "canonical": "ThinkPad X390",
+      "pattern": {
+        "alias": "lenovo thinkpad x390",
+        "canonical": "ThinkPad X390",
+        "is_model_alias": true
+      },
+      "priority": 50,
+      "rule_id": "model_alias_lenovo_thinkpad_x390",
+      "source_rule_name": "lenovo thinkpad x390 -> ThinkPad X390"
+    },
+    {
+      "canonical": "ThinkPad X13 Gen 1",
+      "pattern": {
+        "alias": "lenovo thinkpad x13 gen 1",
+        "canonical": "ThinkPad X13 Gen 1",
+        "is_model_alias": true
+      },
+      "priority": 51,
+      "rule_id": "model_alias_lenovo_thinkpad_x13_gen_1",
+      "source_rule_name": "lenovo thinkpad x13 gen 1 -> ThinkPad X13 Gen 1"
+    },
+    {
+      "canonical": "ThinkPad X13 Gen 2",
+      "pattern": {
+        "alias": "lenovo thinkpad x13 gen 2",
+        "canonical": "ThinkPad X13 Gen 2",
+        "is_model_alias": true
+      },
+      "priority": 52,
+      "rule_id": "model_alias_lenovo_thinkpad_x13_gen_2",
+      "source_rule_name": "lenovo thinkpad x13 gen 2 -> ThinkPad X13 Gen 2"
+    },
+    {
+      "canonical": "ThinkPad X13 Gen 3",
+      "pattern": {
+        "alias": "lenovo thinkpad x13 gen 3",
+        "canonical": "ThinkPad X13 Gen 3",
+        "is_model_alias": true
+      },
+      "priority": 53,
+      "rule_id": "model_alias_lenovo_thinkpad_x13_gen_3",
+      "source_rule_name": "lenovo thinkpad x13 gen 3 -> ThinkPad X13 Gen 3"
+    },
+    {
+      "canonical": "ThinkPad X13 Gen 4",
+      "pattern": {
+        "alias": "lenovo thinkpad x13 gen 4",
+        "canonical": "ThinkPad X13 Gen 4",
+        "is_model_alias": true
+      },
+      "priority": 54,
+      "rule_id": "model_alias_lenovo_thinkpad_x13_gen_4",
+      "source_rule_name": "lenovo thinkpad x13 gen 4 -> ThinkPad X13 Gen 4"
+    },
+    {
+      "canonical": "ThinkPad X13 Gen 5",
+      "pattern": {
+        "alias": "lenovo thinkpad x13 gen 5",
+        "canonical": "ThinkPad X13 Gen 5",
+        "is_model_alias": true
+      },
+      "priority": 55,
+      "rule_id": "model_alias_lenovo_thinkpad_x13_gen_5",
+      "source_rule_name": "lenovo thinkpad x13 gen 5 -> ThinkPad X13 Gen 5"
+    },
+    {
+      "canonical": "ThinkPad X13 Yoga Gen 3",
+      "pattern": {
+        "alias": "lenovo thinkpad x13 gen 3 (yoga)",
+        "canonical": "ThinkPad X13 Yoga Gen 3",
+        "is_model_alias": true
+      },
+      "priority": 56,
+      "rule_id": "model_alias_lenovo_thinkpad_x13_gen_3_yoga",
+      "source_rule_name": "lenovo thinkpad x13 gen 3 (yoga) -> ThinkPad X13 Yoga Gen 3"
+    },
+    {
+      "canonical": "iPad Air 11-inch (M2)",
+      "pattern": {
+        "alias": "ipad air 11-inch (m2)",
+        "canonical": "iPad Air 11-inch (M2)",
+        "is_model_alias": true
+      },
+      "priority": 57,
+      "rule_id": "model_alias_ipad_air_11_inch_m2",
+      "source_rule_name": "ipad air 11-inch (m2) -> iPad Air 11-inch (M2)"
+    },
+    {
+      "canonical": "iPad Air 5th Gen",
+      "pattern": {
+        "alias": "ipad air 5th gen",
+        "canonical": "iPad Air 5th Gen",
+        "is_model_alias": true
+      },
+      "priority": 58,
+      "rule_id": "model_alias_ipad_air_5th_gen",
+      "source_rule_name": "ipad air 5th gen -> iPad Air 5th Gen"
+    }
+  ]
+}
