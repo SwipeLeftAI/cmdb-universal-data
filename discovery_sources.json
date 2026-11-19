@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "SwipeLeft universal discovery-source catalog. Universal content only \u2014 never customer-specific. Consumed anonymously by every ServiceMatch deployment (back_end/cmdb/discovery_sources_catalog.py). Token normalization: lowercase, spaces/hyphens -> underscores.",
+  "description": "SwipeLeft universal discovery-source catalog. Universal content only — never customer-specific. Consumed anonymously by every ServiceMatch deployment (back_end/cmdb/discovery_sources_catalog.py). Token normalization: lowercase, spaces/hyphens -> underscores.",
   "note_ad_computers": "Active Directory computer objects are DELIBERATELY absent: AD is merge-only corroboration and may never originate CIs (PLAN_CSDM5 item 21).",
   "sources": [
     {
@@ -85,6 +85,45 @@
         "logicmonitor_deviceexport"
       ],
       "notes": "LogicMonitor infrastructure monitoring (spainsim_infra F-17, 2026-06-10)."
+    },
+    {
+      "canonical": "datadog",
+      "intent": "device_discovery",
+      "aliases": [
+        "datadog_hosts",
+        "datadog_infrastructure",
+        "dd_hosts"
+      ],
+      "notes": "Datadog agent-based infrastructure monitoring — the Hosts API pull (GET /api/v1/hosts), one row per host the Agent reports; hostname-only identity, no serial. B499, 2026-11-19."
+    },
+    {
+      "canonical": "cisco_catalyst",
+      "intent": "device_discovery",
+      "aliases": [
+        "cisco_dna_center",
+        "catalyst_center",
+        "dnac"
+      ],
+      "notes": "Cisco Catalyst Center (formerly DNA Center) Intent API network-device inventory — switches, routers, wireless controllers and their access points; serial from the chassis. B514, 2026-11-19."
+    },
+    {
+      "canonical": "qualys",
+      "intent": "enrichment_only",
+      "aliases": [
+        "qualys_detections",
+        "qualys_vm",
+        "qualys_vmdr"
+      ],
+      "notes": "Qualys VMDR Host List Detection export — one row per host x QID: findings about devices the discovery sources already know, never device rows; no serial anywhere. B509, 2026-11-19."
+    },
+    {
+      "canonical": "datadog_service_catalog",
+      "intent": "app_feeder",
+      "aliases": [
+        "datadog_services",
+        "dd_service_catalog"
+      ],
+      "notes": "Datadog Service Catalog (GET /api/v2/services/definitions, schema v2.2) — one definition per service: owner team, tier, lifecycle, contacts; CSDM evidence, never device rows. B515, 2026-11-19."
     }
   ]
 }
