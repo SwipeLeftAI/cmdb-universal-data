@@ -102,9 +102,10 @@
       "aliases": [
         "cisco_dna_center",
         "catalyst_center",
-        "dnac"
+        "dnac",
+        "cisco_catalyst_center"
       ],
-      "notes": "Cisco Catalyst Center (formerly DNA Center) Intent API network-device inventory — switches, routers, wireless controllers and their access points; serial from the chassis. B514, 2026-11-19."
+      "notes": "Cisco Catalyst Center (formerly DNA Center) Intent API network-device inventory — switches, routers, wireless controllers and their access points; serial from the chassis. B514, 2026-11-19. B524: 'cisco_catalyst_center' is the runner's display name as it lands on every record; without it the disposition skipped every NEW Cisco device."
     },
     {
       "canonical": "qualys",
