@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "description": "ServiceMatch STANDARD CLASS EXTENSIONS — ServiceNow classes a destination does not ship that discovery sources need; each is a proposal the customer's administrator creates under their own scope (u_ prefix). Mirrors back_end/cmdb/class_extensions.py (pinned equal). Check ServiceNow's CMDB CI Class Models store app before adding one.",
+  "extensions": [
+    {
+      "name": "u_cmdb_ci_sensor",
+      "label": "Sensor",
+      "extends": "cmdb_ci_hardware",
+      "why": "A sensor that watches a piece of equipment (temperature, humidity, door, motion). ServiceNow ships no sensor class in the base CMDB and none in the CI Class Models IoT family; without this the records of an environmental-monitoring platform have nowhere to go but review.",
+      "device_kinds": [
+        "sensor",
+        "iot_sensor",
+        "environmental_sensor"
+      ],
+      "sources": [
+        "sensorhubb"
+      ],
+      "fields": [
+        {
+          "name": "serial_number",
+          "label": "Serial number",
+          "type": "string",
+          "identifier": true,
+          "note": "the radio or hardware id (LoRaWAN EUI-64 for SensorHubb) — the identity shared with readings and alerts"
+        },
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "string",
+          "note": "the site label; names collide across sites, never identity"
+        },
+        {
+          "name": "model_id",
+          "label": "Model",
+          "type": "reference",
+          "reference": "cmdb_model"
+        },
+        {
+          "name": "location",
+          "label": "Location",
+          "type": "reference",
+          "reference": "cmn_location",
+          "note": "the SITE — a sensor belongs to the site, never to a gateway"
+        },
+        {
+          "name": "last_discovered",
+          "label": "Last observed",
+          "type": "glide_date_time"
+        },
+        {
+          "name": "u_sensor_type",
+          "label": "Sensor type",
+          "type": "string",
+          "note": "the measurement channel (TEMPERATURE, HUMIDITY, DOOR …)"
+        },
+        {
+          "name": "u_equipment_type",
+          "label": "Equipment watched",
+          "type": "string",
+          "note": "what the sensor watches (WALK_IN_FREEZER …) — the equipment itself is not a CI"
+        },
+        {
+          "name": "u_observed_by",
+          "label": "Observed by",
+          "type": "string",
+          "note": "the platform that reports the unit"
+        }
+      ],
+      "identification": {
+        "rule": "serial_number",
+        "fallback": [
+          "name",
+          "location"
+        ],
+        "note": "inherits Hardware's serial-number identification; the EUI is the serial"
+      },
+      "excluded_on_purpose": [
+        "readings",
+        "health scores",
+        "battery",
+        "signal strength",
+        "alerts"
+      ],
+      "excluded_why": "coverage before condition: the unit exists and is observed; its condition stays in the platform",
+      "added": "2026-11-20",
+      "ref": "B526"
+    }
+  ]
+}
