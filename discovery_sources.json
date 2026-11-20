@@ -124,6 +124,15 @@
         "dd_service_catalog"
       ],
       "notes": "Datadog Service Catalog (GET /api/v2/services/definitions, schema v2.2) — one definition per service: owner team, tier, lifecycle, contacts; CSDM evidence, never device rows. B515, 2026-11-19."
+    },
+    {
+      "canonical": "sensorhubb",
+      "intent": "device_discovery",
+      "aliases": [
+        "sensorhubb_units",
+        "sensorhubb_unit_export"
+      ],
+      "notes": "SensorHubb facilities-sensor platform — the vendor's per-site unit export (JSON: gateways[] + sensors[]), one CI per unit keyed on the LoRaWAN EUI-64; readings and alerts are evidence, never device rows; sensors belong to the site, not the gateway. Registered against the vendor's own anonymised export (the first real-export basis). B519, 2026-11-19."
     }
   ]
 }
