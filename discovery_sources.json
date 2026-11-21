@@ -122,9 +122,11 @@
       "intent": "app_feeder",
       "aliases": [
         "datadog_services",
-        "dd_service_catalog"
+        "dd_service_catalog",
+        "datadog_service_defs",
+        "datadog_service_defs_json"
       ],
-      "notes": "Datadog Service Catalog (GET /api/v2/services/definitions, schema v2.2) — one definition per service: owner team, tier, lifecycle, contacts; CSDM evidence, never device rows. B515, 2026-11-19."
+      "notes": "Datadog Service Catalog (GET /api/v2/services/definitions, schema v2.2) — one definition per service: owner team, tier, lifecycle, contacts; CSDM evidence, never device rows. B515, 2026-11-19. The datadog_service_defs / _json aliases are the two staged evidence DOCUMENTS of the same register (tabular export and Datadog's own service.datadog.yaml/JSON schema) — the tokens ServiceMatch records when a customer stages the files; unregistered they read as unknown sources. B552, 2026-11-21."
     },
     {
       "canonical": "sensorhubb",
