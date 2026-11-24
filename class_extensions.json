@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "ServiceMatch STANDARD CLASS EXTENSIONS — ServiceNow classes a destination does not ship that discovery sources need; each is a proposal the customer's administrator creates under their own scope (u_ prefix). Mirrors back_end/cmdb/class_extensions.py (pinned equal). Check ServiceNow's CMDB CI Class Models store app before adding one.",
+  "description": "ServiceMatch STANDARD CLASS EXTENSIONS — ServiceNow classes a destination does not ship that discovery sources need; each is a proposal the customer's administrator creates under their own scope (u_ prefix). Mirrors back_end/cmdb/class_extensions.py (every published entry equals its bundled twin). Check ServiceNow's base CMDB, the CMDB CI Class Models store app and OT Manager before adding one; where a shipped class exists outside the base CMDB the entry's `alternatives` names it.",
   "extensions": [
     {
       "name": "u_cmdb_ci_sensor",
@@ -84,6 +84,311 @@
       "excluded_why": "coverage before condition: the unit exists and is observed; its condition stays in the platform",
       "added": "2026-11-20",
       "ref": "B526"
+    },
+    {
+      "name": "u_cmdb_ci_lab_instrument",
+      "label": "Laboratory instrument",
+      "extends": "cmdb_ci_hardware",
+      "why": "A laboratory instrument (chromatograph, balance, plate reader, spectrometer, incubator, freezer monitor) in a regulated estate. No discovery agent runs on it: the instrument is known to the chromatography data system or LIMS that drives it, to the calibration register, and to nobody else. ServiceNow ships no class for it in the base CMDB and none in the CI Class Models store app (cmdb_ci_hc_device is a patient-facing healthcare device, cmdb_ci_manufacturing a factory asset, and the store app's own class map sends 'measurement systems' to the generic cmdb_ci_iot parent). Without this the instrument fleet that a GxP change board governs most closely is the one the CMDB cannot see.",
+      "device_kinds": [
+        "lab_instrument",
+        "laboratory_instrument",
+        "analytical_instrument",
+        "analyzer"
+      ],
+      "sources": [],
+      "fields": [
+        {
+          "name": "serial_number",
+          "label": "Serial number",
+          "type": "string",
+          "identifier": true,
+          "note": "the manufacturer serial on the instrument plate — the identity the calibration register and the vendor service record share"
+        },
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "string",
+          "note": "the lab asset label (e.g. HPLC-07); labels are reused across sites, never identity"
+        },
+        {
+          "name": "model_id",
+          "label": "Model",
+          "type": "reference",
+          "reference": "cmdb_model"
+        },
+        {
+          "name": "manufacturer",
+          "label": "Manufacturer",
+          "type": "reference",
+          "reference": "core_company"
+        },
+        {
+          "name": "location",
+          "label": "Location",
+          "type": "reference",
+          "reference": "cmn_location",
+          "note": "the laboratory / room the instrument is qualified in"
+        },
+        {
+          "name": "u_instrument_type",
+          "label": "Instrument type",
+          "type": "string",
+          "note": "what it measures or does (HPLC, GC-MS, BALANCE, PLATE_READER, INCUBATOR …)"
+        },
+        {
+          "name": "u_controlling_system",
+          "label": "Controlling system",
+          "type": "string",
+          "note": "the CDS / LIMS / instrument-control software that drives it — the system that knows the instrument exists"
+        },
+        {
+          "name": "u_gxp_relevant",
+          "label": "GxP relevant",
+          "type": "boolean",
+          "note": "whether changes to it go through the regulated change board; a governance flag, not a condition"
+        },
+        {
+          "name": "last_discovered",
+          "label": "Last observed",
+          "type": "glide_date_time"
+        }
+      ],
+      "identification": {
+        "rule": "serial_number",
+        "fallback": [
+          "name",
+          "location"
+        ],
+        "note": "inherits Hardware's serial-number identification; the plate serial is the identity"
+      },
+      "excluded_on_purpose": [
+        "calibration dates",
+        "calibration status",
+        "qualification status (IQ/OQ/PQ)",
+        "maintenance schedule",
+        "method files",
+        "audit-trail entries"
+      ],
+      "excluded_why": "the CMDB holds the asset, the calibration register and the validation system hold its regulated state (21 CFR Part 11 / Annex 11) — copying those onto the CI makes two records of record",
+      "alternatives": [],
+      "added": "2026-11-23",
+      "ref": "B570"
+    },
+    {
+      "name": "u_cmdb_ci_access_controller",
+      "label": "Access controller",
+      "extends": "cmdb_ci_hardware",
+      "why": "A badge or door access controller — the panel that holds the door schedule and the reader credentials, and the readers it drives. It is on the network (the Thandrel estate had one no agent reported, B542), it has a serial and a model, and a change to it is a change to who can enter a building. ServiceNow ships no class for it in the base CMDB. If the CMDB CI Class Models store app is installed, use cmdb_ci_security (Security Device, under cmdb_ci_iot) instead — but know that it is a bucket: cameras, intrusion detection, YubiKeys and badge readers all land in it, so an estate that has to answer 'which doors does this panel control' still wants a class of its own.",
+      "device_kinds": [
+        "access_controller",
+        "badge_controller",
+        "door_controller",
+        "badge_reader",
+        "access_control_panel"
+      ],
+      "sources": [],
+      "fields": [
+        {
+          "name": "serial_number",
+          "label": "Serial number",
+          "type": "string",
+          "identifier": true,
+          "note": "the controller serial — the identity the physical-security platform and the vendor share"
+        },
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "string",
+          "note": "the panel label as the access-control platform names it"
+        },
+        {
+          "name": "model_id",
+          "label": "Model",
+          "type": "reference",
+          "reference": "cmdb_model"
+        },
+        {
+          "name": "manufacturer",
+          "label": "Manufacturer",
+          "type": "reference",
+          "reference": "core_company"
+        },
+        {
+          "name": "ip_address",
+          "label": "IP address",
+          "type": "string",
+          "note": "how the controller was seen on the network; addresses move, never identity"
+        },
+        {
+          "name": "mac_address",
+          "label": "MAC address",
+          "type": "string"
+        },
+        {
+          "name": "location",
+          "label": "Location",
+          "type": "reference",
+          "reference": "cmn_location",
+          "note": "the building / floor the panel secures"
+        },
+        {
+          "name": "u_doors_controlled",
+          "label": "Doors controlled",
+          "type": "integer",
+          "note": "how many doors / readers the panel drives — a count, so the impact of a change is visible"
+        },
+        {
+          "name": "u_managed_by_system",
+          "label": "Managed by system",
+          "type": "string",
+          "note": "the physical-access platform that configures it"
+        },
+        {
+          "name": "last_discovered",
+          "label": "Last observed",
+          "type": "glide_date_time"
+        }
+      ],
+      "identification": {
+        "rule": "serial_number",
+        "fallback": [
+          "name",
+          "location"
+        ],
+        "note": "inherits Hardware's serial-number identification; the controller serial is the identity"
+      },
+      "excluded_on_purpose": [
+        "cardholder lists",
+        "door schedules",
+        "access events",
+        "credential data",
+        "alarm state"
+      ],
+      "excluded_why": "the CI is the panel, not who may pass through it — cardholders and events are the physical-security platform's record and often personal data",
+      "alternatives": [
+        {
+          "class": "cmdb_ci_security",
+          "ships_in": "CMDB CI Class Models (ServiceNow Store, free)",
+          "note": "Security Device under cmdb_ci_iot — the shipped bucket for cameras, intrusion detection and access control; use it when the store app is installed and one bucket is enough"
+        }
+      ],
+      "added": "2026-11-23",
+      "ref": "B570"
+    },
+    {
+      "name": "u_cmdb_ci_bms_controller",
+      "label": "Building controller",
+      "extends": "cmdb_ci_hardware",
+      "why": "A building-management controller — the BACnet or Modbus device that runs an HVAC plant, a chiller, a lighting zone or a cold room. It is the thing an environmental-monitoring platform (SensorHubb and its peers) reads from and the thing a facilities team changes. ServiceNow ships no class for it in the base CMDB. If the CMDB CI Class Models store app is installed, its own class map sends BACnet controllers, HVAC controls, lighting and leak detection to the generic cmdb_ci_iot parent — a home, not a class; if Operational Technology Manager is licensed, cmdb_ci_ot_plc is the shipped class for a controller that is a PLC, but OT Manager is a paid product built for the factory floor, not the building.",
+      "device_kinds": [
+        "bms_controller",
+        "building_controller",
+        "bacnet_controller",
+        "modbus_controller",
+        "hvac_controller",
+        "ddc_controller"
+      ],
+      "sources": [],
+      "fields": [
+        {
+          "name": "serial_number",
+          "label": "Serial number",
+          "type": "string",
+          "identifier": true,
+          "note": "the controller serial — stable across re-addressing and network changes"
+        },
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "string",
+          "note": "the BMS object name (e.g. AHU-3-DDC); names are per site, never identity"
+        },
+        {
+          "name": "model_id",
+          "label": "Model",
+          "type": "reference",
+          "reference": "cmdb_model"
+        },
+        {
+          "name": "manufacturer",
+          "label": "Manufacturer",
+          "type": "reference",
+          "reference": "core_company"
+        },
+        {
+          "name": "ip_address",
+          "label": "IP address",
+          "type": "string",
+          "note": "BACnet/IP or Modbus TCP address as last seen; addresses move"
+        },
+        {
+          "name": "mac_address",
+          "label": "MAC address",
+          "type": "string"
+        },
+        {
+          "name": "location",
+          "label": "Location",
+          "type": "reference",
+          "reference": "cmn_location",
+          "note": "the plant room / zone the controller serves"
+        },
+        {
+          "name": "u_protocol",
+          "label": "Protocol",
+          "type": "string",
+          "note": "BACNET_IP, BACNET_MSTP, MODBUS_TCP, MODBUS_RTU, LONWORKS …"
+        },
+        {
+          "name": "u_device_instance",
+          "label": "Device instance",
+          "type": "string",
+          "note": "the BACnet device instance number or Modbus unit id — unique only within one BMS network, so never the identifier"
+        },
+        {
+          "name": "u_equipment_served",
+          "label": "Equipment served",
+          "type": "string",
+          "note": "what the controller runs (AHU, CHILLER, COLD_ROOM, LIGHTING_ZONE …) — the plant itself is not a CI"
+        },
+        {
+          "name": "last_discovered",
+          "label": "Last observed",
+          "type": "glide_date_time"
+        }
+      ],
+      "identification": {
+        "rule": "serial_number",
+        "fallback": [
+          "name",
+          "location"
+        ],
+        "note": "inherits Hardware's serial-number identification; the device instance is a network-local address, not an identity"
+      },
+      "excluded_on_purpose": [
+        "setpoints",
+        "point values",
+        "trend logs",
+        "alarms",
+        "schedules",
+        "firmware configuration"
+      ],
+      "excluded_why": "coverage before condition: the controller exists and is observed; what it is doing stays in the BMS, which is the system of record for the plant",
+      "alternatives": [
+        {
+          "class": "cmdb_ci_iot",
+          "ships_in": "CMDB CI Class Models (ServiceNow Store, free)",
+          "note": "the generic IoT Device parent the store app maps BACnet controllers and HVAC controls to — a home when one bucket is enough, not a class"
+        },
+        {
+          "class": "cmdb_ci_ot_plc",
+          "ships_in": "Operational Technology Manager (paid product)",
+          "note": "the shipped class when the controller is a PLC and OT Manager is licensed"
+        }
+      ],
+      "added": "2026-11-23",
+      "ref": "B570"
     }
   ]
 }
